@@ -1,14 +1,14 @@
 ---
 name: Chi-Kuang
 surname: Yeh
-position: "PhD candidate"
-address: "Department of Statistics and Actuarial Science"
-phone: +1 22 3333 4444
+position: "CANSSI Distinguish Postdoctoral Fellow"
+address: "Department of Statistics and Actuarial Science \nUniversity of Waterloo"
+
 www: chikuang.github.io
 email: "chi-kuang.yeh@uwaterloo.ca"
 twitter: chikuang_y
 github: chikuang
-linkedin: mariecurie
+linkedin: chikuang
 date: "`r format(Sys.time(), '%B %Y')`"
 output: 
   vitae::awesomecv:
@@ -21,36 +21,41 @@ library(vitae)
 ```
 
 # Research interest
-
- * I poisoned myself doing research.
- * I was the first woman to win a Nobel prize
- * I was the first person and only woman to win a Nobel prize in two different sciences.
+  1. Functional data analysis
+  2. Time series analysis
+  3. Longitudinal data analysis
+  4. Dependence modelling
 
 # Education
 
 ```{r}
 library(tibble)
 tribble(
-  ~ Degree, ~ Year, ~ Institution, ~ Where, ~Supervisor,
-  "PhD", "Onward", "University of Waterloo (UWaterloo)", "ON, Canada", "Greg Rice",
-  "Master of Science", "2016-2018", "University of Victoria (UVic)", "BC, Canada", "Julie Zhou",
-  "Bachelor of Science", "2013-2016", "University of Victoria", "BC, Canada", "Julie Zhou"
+  ~ Degree, ~ Year, ~ Institution, ~ Where, ~Supervisor, ~Thesis,
+  "PhD in Statisitcs", "2018-2023", "University of Waterloo", "ON, Canada", "Gregory  Rice & Joel A. Dubin", "Methods in Functional Data Analysis: Forecast Evaluation, Robust Serial Dependence Measures, and a Spatial Factor Copula Model",
+  #
+  "MSc in Statisitcs", "2016-2018", "University of Victoria", "BC, Canada", "Julie Zhou", "Optimal Regression Design under Second-order Least Squares Estimator: Theory, Algorithm and Applications",
+  #
+  "BSc (H.) in combined Mathematics and Statistics", "2013-2016", "University of Victoria", "BC, Canada", "Julie Zhou", "NA"
 ) %>% 
-  detailed_entries(glue::glue("{Degree}, Advisor: {Supervisor}"), Year, Institution, Where)
+  detailed_entries(glue::glue("{Degree}, Advisor: {Supervisor}"), Year, Institution, Where, glue::glue("Disseration: {Thesis}"))
 ```
 
 # Selected awards
 
 ```{r}
 tribble(
-  ~Year, ~Type, ~Desc,
-  "2021-2022", "President Scholarship", "UWaterloo",
-  "2020-2021", "President Scholarship", "UWaterloo"
+  ~Year, ~Desc, ~Issuer,
+  "2022-2023", "Ontario Graduate Scholarship", "Government of Ontario",
+  "2022-2023", "Ontario Graduate Scholarship", "Government of Ontario",
+  "2020-2023", "President Scholarship", "University of Waterloo",
+  "2021 Apr", "Statistics and Actaurial Science Chair's Award", "University of Waterloo"
 ) %>% 
   brief_entries(
-    glue::glue("Nobel Prize in {Type}"),
+    # glue::glue("Nobel Prize in {Type}"),
+    Desc,
     Year, 
-    Desc
+    Issuer
   )
 ```
 
