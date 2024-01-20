@@ -3,7 +3,6 @@ name: Chi-Kuang
 surname: Yeh
 position: "CANSSI Distinguish Postdoctoral Fellow"
 address: "Department of Statistics and Actuarial Science \nUniversity of Waterloo"
-
 www: chikuang.github.io
 email: "chi-kuang.yeh@uwaterloo.ca"
 twitter: chikuang_y
@@ -49,7 +48,14 @@ tribble(
   "2022-2023", "Ontario Graduate Scholarship", "Government of Ontario",
   "2022-2023", "Ontario Graduate Scholarship", "Government of Ontario",
   "2020-2023", "President Scholarship", "University of Waterloo",
-  "2021 Apr", "Statistics and Actaurial Science Chair's Award", "University of Waterloo"
+  "2021 Apr", "Statistics and Actaurial Science Chair's Award", "University of Waterloo",
+  "2018 Jun", "Student Travel Award", "Statistical Society of Canada",
+  "2018",  "Graduate Student Conference Travel Grant", "University of Victoria",
+  "2018 Apr", "CUPE Conference Travel Award", "University of Victoria",
+  "2017", "Florence and Wallace Wilkinson Memorial Award", "University of Victoria",
+  "2017-2018", "Faculty of Graduate Studies Scholarship", "University of Victoria",
+  "2016", "University Scholarship", "University of Victoria",
+  "2010", "Summit Entrance Scholarship", "Simon Fraser University"
 ) %>% 
   brief_entries(
     # glue::glue("Nobel Prize in {Type}"),
